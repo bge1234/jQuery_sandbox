@@ -1,7 +1,3 @@
-$("#reset").click(function() {
-  $("img").remove();
-});
-
 $("#float").click(function() {
   //Random selection
   var rand = Math.random();
@@ -36,4 +32,8 @@ $("#block").click(function() {
 
   //Append
   $("#container").append("<img src='" + path + "'>").css({display: "block"});
+});
+
+$("#reset").click(function() {
+  $("img").remove();
 });
