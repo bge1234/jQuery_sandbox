@@ -1,11 +1,39 @@
-//instructions:
+$("#reset").click(function() {
+  $("img").remove();
+});
 
-// Write a script that , when you click on the button,
-// adds a new fox RANDOM image to the container div.
-// All foxes should be floated.  Make another button to remove all foxes.
+$("#float").click(function() {
+  //Random selection
+  var rand = Math.random();
+  var path = "";
+  if(rand <= .33)
+    path = collection["images"][0]["image_src"];
+  else if (rand <= .66)
+    path = collection["images"][1]["image_src"];
+  else
+    path = collection["images"][2]["image_src"];
 
-// Stretch:   Make several buttons that change the way the foxes are
-// added and displayed.  Example:  a new add button would change all
-// to display: block in the existing dom and add a new random fox which is
-// also display: block.  Hit the display float button and they all change
-// back to float and it adds a new floated random fox. 
+  //Change existing
+  $("img").css({float: "left"});
+
+  //Append
+  $("#container").append("<img src='" + path + "'>").css({float: "left"});
+});
+
+$("#block").click(function() {
+  //Random selection
+  var rand = Math.random();
+  var path = "";
+  if(rand <= .33)
+    path = collection["images"][0]["image_src"];
+  else if (rand <= .66)
+    path = collection["images"][1]["image_src"];
+  else
+    path = collection["images"][2]["image_src"];
+
+  //Change existing
+  $("img").css({display: "block"});
+
+  //Append
+  $("#container").append("<img src='" + path + "'>").css({display: "block"});
+});
