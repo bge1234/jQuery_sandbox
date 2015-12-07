@@ -34,7 +34,12 @@ $("#block").click(function() {
   $("#container").append("<img src='" + path + "'>").css({display: "block"});
 });
 
-$("#reset").click(function() {
+$("#clear").click(function() {
   $("img").remove();
   $("#container").append('<iframe width="300" height="200" src="http://www.youtube.com/embed/jofNR_WkoCE?start=39" frameborder="0" allowfullscreen></iframe>');
+});
+
+$("#reset").click(function() {
+  $("img").remove();
+  $("iframe").remove();
 });
