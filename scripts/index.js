@@ -36,4 +36,5 @@ $("#block").click(function() {
 
 $("#reset").click(function() {
   $("img").remove();
+  $("#container").append('<iframe width="300" height="200" src="http://www.youtube.com/embed/jofNR_WkoCE?start=39" frameborder="0" allowfullscreen></iframe>');
 });
